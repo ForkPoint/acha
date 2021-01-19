@@ -1,6 +1,6 @@
-(defproject acha "0.2.5"
+(defproject acha "0.3.0"
   :description "Enterprise Git Achievements Provider. Web scale. In the cloud"
-  :url "http://acha-acha.co"
+  :url "http://forkpoint.com"
 
   :global-vars  {*warn-on-reflection* true}
   :source-paths ["src-clj"]
@@ -13,37 +13,38 @@
                        #"public/react-.*"]
 
   :dependencies [
-    [org.clojure/clojure "1.7.0-RC1"]
-    [org.clojure/tools.logging "0.3.1"]
-    [org.clojure/tools.cli "0.3.1"]
-    [ch.qos.logback/logback-classic "1.1.3"]
+    [org.clojure/clojure "1.10.1"]
+    [org.clojure/tools.logging "1.1.0"]
+    [org.clojure/tools.cli "1.0.194"]
+    [ch.qos.logback/logback-classic "1.2.3"]
 
-    [http-kit "2.1.19"]
-    [ring/ring-core "1.3.2" :exclusions [commons-codec org.clojure/tools.reader]]
-    [ring/ring-devel "1.3.2"]
-    [compojure "1.3.4"]
-    [com.cognitect/transit-clj "0.8.275" :exclusions [org.msgpack/msgpack org.clojure/test.check]]
+    [http-kit "2.5.1"]
+    [ring/ring-core "1.5.1" :exclusions [commons-codec org.clojure/tools.reader]]
+    [ring/ring-devel "1.8.2"]
+    [compojure "1.6.2"]
+    [com.cognitect/transit-clj "1.0.324" :exclusions [org.msgpack/msgpack org.clojure/test.check]]
 
-    [clj-jgit "0.8.10" :exclusions [org.clojure/core.memoize]]
-
-    [org.clojure/java.jdbc "0.3.7"]
-    [org.xerial/sqlite-jdbc "3.8.10.1"]
-    [com.mchange/c3p0 "0.9.5"]
+    [clj-jgit "1.0.1" :exclusions [org.clojure/core.memoize]]
     
-    [org.clojure/clojurescript "0.0-3308"]
 
-    [rum "0.2.6" :exclusions [cljsjs/react]]
-    [cljsjs/react-with-addons "0.12.2-7"]
+    [org.clojure/java.jdbc "0.7.11"]
+    [org.xerial/sqlite-jdbc "3.34.0"]
+    [com.mchange/c3p0 "0.9.5.5"]
+    
+    [org.clojure/clojurescript "1.10.764"]
 
-    [org.clojure/core.async "0.1.338.0-5c5012-alpha"]
-    [com.cognitect/transit-cljs "0.8.220"]
-    [datascript "0.11.4"]
-    [sablono "0.3.4" :exclusions [cljsjs/react]]
+    [rum "0.12.3" :exclusions [cljsjs/react]]
+    [cljsjs/react-with-addons "15.6.1-0"]
+
+    [org.clojure/core.async "1.3.610"]
+    [com.cognitect/transit-cljs "0.8.264"]
+    [datascript "1.0.3"]
+    [sablono "0.8.6" :exclusions [cljsjs/react]]
   ]
 
   :plugins [
-    [lein-ring "0.9.4"]
-    [lein-cljsbuild "1.0.6"]
+    [lein-ring "0.12.5"]
+    [lein-cljsbuild "1.1.8"]
   ]
   :clean-targets ^{:protect false} [
     "target"

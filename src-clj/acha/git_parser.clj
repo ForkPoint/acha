@@ -16,6 +16,7 @@
            [org.eclipse.jgit.lib ObjectReader ObjectLoader Constants FileMode AbbreviatedObjectId ConfigConstants]
            [org.eclipse.jgit.revwalk RevWalk RevCommit RevTree]
            [org.eclipse.jgit.transport FetchResult JschConfigSessionFactory OpenSshConfig$Host SshSessionFactory]
+;;          Check the documentation https://clj-jgit.github.io/clj-jgit/ and use SshdSessionFacotry instead of JschConfigSessionFactory
            [org.eclipse.jgit.treewalk EmptyTreeIterator CanonicalTreeParser AbstractTreeIterator]
            [org.eclipse.jgit.util FS IO]
            [org.eclipse.jgit.util.io DisabledOutputStream]))
